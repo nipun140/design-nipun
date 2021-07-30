@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+html {
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+#root {
+  padding-top: 7rem;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 3rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+}
+
+header .logo {
+  height: 4rem;
+  width: 4rem;
+  margin-right: 4rem;
+}
+
+header .logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+header ul.desktop-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+header ul.desktop-nav li {
+  margin-right: 1.5rem;
+}
+
+header ul.desktop-nav li a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+}
+
+header ul.desktop-nav li a::after {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 0;
+  height: 0.3rem;
+  border-radius: 1rem;
+  width: 0%;
+  background-color: black;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+header ul.desktop-nav li a:hover::after {
+  width: 100%;
+}
+
+header .desktop-nav-btn {
+  margin-left: auto;
+}
+
+.early-access-btn {
+  border: 0.2rem solid #2903ff;
+  color: #2903ff;
+}
+
+.early-access-btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #2903ff;
+}
+
+.default-btn {
+  padding: 1rem 2.8rem;
+  background-color: transparent;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.mobile-nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.mobile-nav-container ul.mobile-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+.mobile-nav-container ul.mobile-nav li {
+  margin-bottom: 1.8rem;
+}
+
+.mobile-nav-container ul.mobile-nav li a {
+  display: block;
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.mobile-nav-container .mobile-nav-btn {
+  font-size: 2rem;
+  position: absolute;
+  left: 50%;
+  bottom: 5rem;
+  width: 80%;
+  white-space: nowrap;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.close-mobile-nav {
+  width: 0%;
+}
+
+.open-mobile-nav {
+  width: 100%;
+}
+
+.hamburger-btn {
+  width: 3.3rem;
+  height: 3rem;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hamburger-btn .bar {
+  height: 0.6rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  background: black;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.hamburger-btn .anim-bar1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: white;
+}
+
+.hamburger-btn .anim-bar2 {
+  opacity: 0;
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
+  background: white;
+}
+
+.hamburger-btn .anim-bar3 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background: white;
+}
+
+.hero-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-container .hero-col-img {
+  width: 50%;
+}
+
+.hero-container .hero-col-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-container .hero-col-text {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 2rem;
+}
+
+.hero-container .hero-col-text h1 {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.hero-container .hero-col-text p {
+  font-size: 1.6rem;
+  margin: 3rem 0;
+  line-height: 2.5rem;
+}
+
+.hero-container .hero-col-text .hero-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero-container .hero-col-text .hero-btns .start-btn {
+  color: white;
+  border: 0.2rem solid #2903ff;
+  background-color: #2903ff;
+}
+
+.hero-container .hero-col-text .hero-btns .start-btn:hover {
+  cursor: pointer;
+  color: #2903ff;
+  background-color: white;
+}
+
+.hero-container .hero-col-text .hero-btns .watch-video-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  color: #2903ff;
+  border: 0.2rem solid transparent;
+  margin-left: 0.5rem;
+}
+
+.hero-container .hero-col-text .hero-btns .watch-video-btn svg {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+.hero-container .hero-col-text .hero-btns .watch-video-btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #2903ff;
+}
+
+.hero-container .hero-col-text .company-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hero-container .hero-col-text .company-logos span {
+  color: gray;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.hero-container .hero-col-text .company-logos img {
+  width: 5rem;
+  margin-right: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+  .hero-container .hero-col-text h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  html {
+    font-size: 9px;
+  }
+  header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header ul.desktop-nav {
+    display: none;
+  }
+  header .desktop-nav-btn {
+    display: none;
+  }
+  header .toggle-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .hero-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero-container .hero-col-img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .hero-container .hero-col-text {
+    width: 100%;
+  }
+  .hero-container .hero-col-text h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .hero-container .hero-col-text p {
+    text-align: center;
+  }
+  .hero-container .hero-col-text .hero-btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 3rem;
+  }
+  .hero-container .hero-col-text .hero-btns .start-btn,
+  .hero-container .hero-col-text .hero-btns .watch-video-btn {
+    width: 70%;
+    margin-bottom: 2rem;
+  }
+  .hero-container .hero-col-text .hero-btns .watch-video-btn {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero-container .hero-col-text .company-logos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero-container .hero-col-text .company-logos span,
+  .hero-container .hero-col-text .company-logos img {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 200px) {
+  html {
+    font-size: 6px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
